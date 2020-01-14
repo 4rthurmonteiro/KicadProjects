@@ -1,0 +1,300 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Raspberry Pi Full Stack HAT"
+Date "2020-01-08"
+Rev "1"
+Comp "Florence Smart Health"
+Comment1 "Designed by Arthur Monteiro"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Raspberry_Pi_2_3 J1
+U 1 1 5E168AB0
+P 5725 3750
+F 0 "J1" H 6400 5250 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 6425 5125 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical" H 5725 3750 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 5725 3750 50  0001 C CNN
+	1    5725 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DPST SW1
+U 1 1 5E16B94A
+P 3100 2875
+F 0 "SW1" H 3100 3200 50  0000 C CNN
+F 1 "SW_DPST" H 3100 3109 50  0000 C CNN
+F 2 "freetronics_footprints:SW_PUSHBUTTON_PTH" H 3100 2875 50  0001 C CNN
+F 3 "~" H 3100 2875 50  0001 C CNN
+	1    3100 2875
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E16C392
+P 7450 4200
+F 0 "R3" H 7520 4246 50  0000 L CNN
+F 1 "R" H 7520 4155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7380 4200 50  0001 C CNN
+F 3 "~" H 7450 4200 50  0001 C CNN
+	1    7450 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E16C6F1
+P 4325 3250
+F 0 "R2" H 4395 3296 50  0000 L CNN
+F 1 "R" H 4395 3205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4255 3250 50  0001 C CNN
+F 3 "~" H 4325 3250 50  0001 C CNN
+	1    4325 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E16C982
+P 3525 3750
+F 0 "R1" H 3595 3796 50  0000 L CNN
+F 1 "R" H 3595 3705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3455 3750 50  0001 C CNN
+F 3 "~" H 3525 3750 50  0001 C CNN
+	1    3525 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5E16CDC9
+P 7450 4850
+F 0 "D1" V 7489 4733 50  0000 R CNN
+F 1 "LED" V 7398 4733 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 7450 4850 50  0001 C CNN
+F 3 "~" H 7450 4850 50  0001 C CNN
+	1    7450 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Sensor:DHT11 U1
+U 1 1 5E16D735
+P 4000 4475
+F 0 "U1" H 3756 4521 50  0000 R CNN
+F 1 "DHT22" H 3756 4430 50  0000 R CNN
+F 2 "Sensor:Aosong_DHT11_5.5x12.0_P2.54mm" H 4000 4075 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 4150 4725 50  0001 C CNN
+	1    4000 4475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 4700 7450 4350
+Wire Wire Line
+	4300 4475 4650 4475
+Wire Wire Line
+	4650 4475 4650 3250
+Wire Wire Line
+	4650 3250 4925 3250
+Wire Wire Line
+	3300 2775 3300 2850
+Connection ~ 3300 2850
+Wire Wire Line
+	3300 2850 3300 2975
+Wire Wire Line
+	3525 3600 3525 2850
+Wire Wire Line
+	3525 2850 3300 2850
+Wire Wire Line
+	2900 2975 2900 2875
+Wire Wire Line
+	2900 2875 2750 2875
+Connection ~ 2900 2875
+Wire Wire Line
+	2900 2875 2900 2775
+Wire Wire Line
+	7450 5000 7450 5500
+NoConn ~ 6025 5050
+NoConn ~ 5925 5050
+NoConn ~ 5825 5050
+NoConn ~ 5725 5050
+NoConn ~ 5625 5050
+NoConn ~ 5525 5050
+NoConn ~ 6525 4550
+NoConn ~ 6525 4450
+NoConn ~ 6525 4250
+NoConn ~ 6525 4150
+NoConn ~ 6525 4050
+NoConn ~ 6525 3950
+NoConn ~ 6525 3850
+NoConn ~ 6525 3650
+NoConn ~ 6525 3550
+NoConn ~ 6525 3250
+NoConn ~ 6525 3150
+NoConn ~ 6525 2950
+NoConn ~ 6525 2850
+NoConn ~ 5925 2450
+NoConn ~ 5625 2450
+NoConn ~ 5525 2450
+Wire Wire Line
+	4475 3250 4650 3250
+Connection ~ 4650 3250
+Wire Wire Line
+	4175 3250 4000 3250
+Wire Wire Line
+	4000 3250 4000 4175
+NoConn ~ 4925 2950
+NoConn ~ 4925 3150
+NoConn ~ 4925 3350
+NoConn ~ 4925 3550
+NoConn ~ 4925 3650
+NoConn ~ 4925 3750
+NoConn ~ 4925 3950
+NoConn ~ 4925 4050
+NoConn ~ 4925 4150
+NoConn ~ 4925 4250
+NoConn ~ 4925 4350
+NoConn ~ 4925 4450
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E18A3D3
+P 2175 5775
+F 0 "#FLG0101" H 2175 5850 50  0001 C CNN
+F 1 "PWR_FLAG" H 2175 5948 50  0000 C CNN
+F 2 "" H 2175 5775 50  0001 C CNN
+F 3 "~" H 2175 5775 50  0001 C CNN
+	1    2175 5775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E18D71B
+P 5425 5425
+F 0 "#PWR0101" H 5425 5175 50  0001 C CNN
+F 1 "GND" H 5430 5252 50  0000 C CNN
+F 2 "" H 5425 5425 50  0001 C CNN
+F 3 "" H 5425 5425 50  0001 C CNN
+	1    5425 5425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5E18E4EF
+P 7450 5500
+F 0 "#PWR0102" H 7450 5250 50  0001 C CNN
+F 1 "GND" H 7455 5327 50  0000 C CNN
+F 2 "" H 7450 5500 50  0001 C CNN
+F 3 "" H 7450 5500 50  0001 C CNN
+	1    7450 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5E18F4A0
+P 3525 3900
+F 0 "#PWR0103" H 3525 3650 50  0001 C CNN
+F 1 "GND" H 3530 3727 50  0000 C CNN
+F 2 "" H 3525 3900 50  0001 C CNN
+F 3 "" H 3525 3900 50  0001 C CNN
+	1    3525 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5E18FF0E
+P 4000 4775
+F 0 "#PWR0104" H 4000 4525 50  0001 C CNN
+F 1 "GND" H 4005 4602 50  0000 C CNN
+F 2 "" H 4000 4775 50  0001 C CNN
+F 3 "" H 4000 4775 50  0001 C CNN
+	1    4000 4775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5425 5050 5425 5275
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E18AF5F
+P 2675 5775
+F 0 "#FLG0102" H 2675 5850 50  0001 C CNN
+F 1 "PWR_FLAG" H 2675 5948 50  0000 C CNN
+F 2 "" H 2675 5775 50  0001 C CNN
+F 3 "~" H 2675 5775 50  0001 C CNN
+	1    2675 5775
+	1    0    0    -1  
+$EndComp
+Text Label 2750 5825 0    50   ~ 0
+GND
+Wire Wire Line
+	2675 5775 2675 5825
+Wire Wire Line
+	2675 5825 2750 5825
+Text Label 2250 5825 0    50   ~ 0
+3V3
+Wire Wire Line
+	2250 5825 2175 5825
+Wire Wire Line
+	2175 5825 2175 5775
+Text Label 5825 2450 1    50   ~ 0
+3V3
+Text Label 2750 2875 2    50   ~ 0
+3V3
+Text Label 4000 3250 2    50   ~ 0
+3V3
+Text Label 4925 2850 1    50   ~ 0
+BUTTON_INPUT
+Text Label 3525 2850 1    50   ~ 0
+BUTTON_INPUT
+Text Label 6525 3450 0    50   ~ 0
+LED_OUTPUT
+Text Label 7450 4050 0    50   ~ 0
+LED_OUTPUT
+Wire Wire Line
+	5425 5275 5325 5275
+Wire Wire Line
+	5325 5050 5325 5275
+Connection ~ 5425 5275
+Wire Wire Line
+	5425 5275 5425 5425
+$Comp
+L Device:R R4
+U 1 1 5E1986D1
+P 8500 4175
+F 0 "R4" H 8570 4221 50  0000 L CNN
+F 1 "R" H 8570 4130 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8430 4175 50  0001 C CNN
+F 3 "~" H 8500 4175 50  0001 C CNN
+	1    8500 4175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5E1986DB
+P 8500 4825
+F 0 "D2" V 8539 4708 50  0000 R CNN
+F 1 "LED" V 8448 4708 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 8500 4825 50  0001 C CNN
+F 3 "~" H 8500 4825 50  0001 C CNN
+	1    8500 4825
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8500 4675 8500 4325
+Wire Wire Line
+	8500 4975 8500 5475
+$Comp
+L power:GND #PWR01
+U 1 1 5E1986E7
+P 8500 5475
+F 0 "#PWR01" H 8500 5225 50  0001 C CNN
+F 1 "GND" H 8505 5302 50  0000 C CNN
+F 2 "" H 8500 5475 50  0001 C CNN
+F 3 "" H 8500 5475 50  0001 C CNN
+	1    8500 5475
+	1    0    0    -1  
+$EndComp
+Text Label 8500 4025 0    50   ~ 0
+3V3
+$EndSCHEMATC
